@@ -1,70 +1,90 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="./scripts.js"></script>
-    <link rel="icon" type="image/x-icon" href="/imgs/favicon.png">
-    <title>Lega Tenkaichi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galleria Video - Blu Notte</title>
+  <!-- Collega qui il tuo file CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div id="bodySim">
-        <div id="space-left"></div>
-        <div id="containerMain">
-            <div id="intImg">
-                <span id="spanRight">
-                    <div></div>
-                </span>
-                <img src="./imgs/logo esteso.png" alt="logo lega">
-                <span id="spanLeft">
-                    <div></div>
-                </span>
-            </div>
-            <div id="navbar">
-                <div class="selected">
-                    <a href="./index.html">
-                        <p>CLASSIFICA</p>
-                    </a>
-                </div>
-                <div class="page">
-                    <a href="./ranghi.html">
-                        <p>RANGHI</p>
-                    </a>
-                </div>
-                <div class="page">
-                    <a href="./archivio.html">
-                        <p>ARCHIVIO</p>
-                    </a>
-                </div>
-                <div class="page">
-                    <a href="./ban.html">
-                        <p>BANLIST</p>
-                    </a>
-                </div>
-                <div class="page">
-                    <a href="./random.html">
-                        <p>RANDOMIZER</p>
-                    </a>
-                </div>
-            </div>
-            <div id="rankHeader">
-                <div class="rankInfo">RANK</div>
-                <div class="rankInfo">NOME</div>
-                <div class="rankInfo">PUNTI</div>
-                <div class="rankInfo">VITTORIE</div>
-                <div class="rankInfo">RANGO</div>
-            </div>
-            <div id="actualRank"></div>
-        </div>
-        <div id="space-right">
-        </div>
-    </div>
-</body>
 
+  <!-- Testata del sito -->
+  <header class="header">
+    <h1>La Mia Collezione Video</h1>
+  </header>
+
+  <!-- Contenitore principale della griglia -->
+  <main class="container">
+    <section class="video-grid">
+
+      <!-- Scheda Video 1: Video YouTube incorporato -->
+      <article class="video-card">
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="Video YouTube" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">Musica</span>
+          <h2 class="video-title">Titolo del Video YouTube</h2>
+          <p class="video-description">
+            Una breve descrizione del primo video. Spiega di cosa tratta il contenuto, quali sono i punti chiave e perché vale la pena guardarlo.
+          </p>
+          <div class="video-meta">
+            <span>11 Nov 2026</span>
+            <span>3:33 min</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Scheda Video 2: Player video HTML5 locale o remoto -->
+      <article class="video-card">
+        <div class="video-wrapper">
+          <video controls poster="https://picsum.photos/800/450?random=1">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+          </video>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">Tecnologia</span>
+          <h2 class="video-title">Riproduzione Video Diretta (HTML5)</h2>
+          <p class="video-description">
+            Questo riquadro usa il tag video standard con immagine di copertina (poster) e controlli di riproduzione integrati.
+          </p>
+          <div class="video-meta">
+            <span>08 Nov 2026</span>
+            <span>0:15 min</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Scheda Video 3: Altro esempio di video -->
+      <article class="video-card">
+        <div class="video-wrapper">
+          <video controls poster="https://picsum.photos/800/450?random=2">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+          </video>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">Design</span>
+          <h2 class="video-title">Guida al Design Interattivo e UI/UX</h2>
+          <p class="video-description">
+            Scopri come creare interfacce moderne ed eleganti per i tuoi progetti web mantenendo un'ottima leggibilità su sfondi scuri.
+          </p>
+          <div class="video-meta">
+            <span>01 Nov 2026</span>
+            <span>10:53 min</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+</body>
 </html>
