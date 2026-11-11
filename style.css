@@ -1,16 +1,13 @@
-/* ==========================================================================
-   RESET E VARIABILI GLOBALI (Palette Blu Notte)
-   ========================================================================== */
 :root {
-  --bg-main: #0b0f19;          /* Blu notte molto scuro per lo sfondo */
-  --bg-card: #151c2e;          /* Blu notte leggermente più chiaro per i riquadri */
-  --bg-card-hover: #1c263e;    /* Colore scheda al passaggio del mouse */
+  --bg-main: #0b0f19;
+  --bg-card: #151c2e;
+  --bg-card-hover: #1c263e;
   
-  --text-primary: #f1f5f9;     /* Bianco morbido ad alta leggibilità */
-  --text-secondary: #94a3b8;   /* Grigio azzurrato per le descrizioni */
-  --text-muted: #64748b;       /* Grigio scuro per dettagli minori */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
   
-  --accent: #38bdf8;           /* Blu/Ciano brillante per highlights e link */
+  --accent: #38bdf8;
   --accent-glow: rgba(56, 189, 248, 0.15);
   
   --border-color: rgba(255, 255, 255, 0.08);
@@ -32,9 +29,6 @@ body {
   padding-bottom: 60px;
 }
 
-/* ==========================================================================
-   HEADER
-   ========================================================================== */
 .header {
   text-align: center;
   padding: 40px 20px;
@@ -48,9 +42,6 @@ body {
   color: var(--text-primary);
 }
 
-/* ==========================================================================
-   LAYOUT A GRIGLIA (Responsive)
-   ========================================================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -59,14 +50,10 @@ body {
 
 .video-grid {
   display: grid;
-  /* Crea colonne automatiche da almeno 300px di larghezza ciascuna */
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
 }
 
-/* ==========================================================================
-   SCHEDA VIDEO (CARD)
-   ========================================================================== */
 .video-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -85,11 +72,10 @@ body {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
 }
 
-/* Container per mantenere il video in proporzione 16:9 */
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* Rapporto d'aspetto 16:9 */
+  padding-top: 56.25%;
   background-color: #000;
 }
 
@@ -103,9 +89,6 @@ body {
   border: none;
 }
 
-/* ==========================================================================
-   CONTENUTO E TESTI
-   ========================================================================== */
 .video-content {
   padding: 20px;
   display: flex;
@@ -138,7 +121,7 @@ body {
   font-size: 0.95rem;
   color: var(--text-secondary);
   margin-bottom: 20px;
-  flex-grow: 1; /* Spinge i dettagli verso il basso se le schede hanno altezze diverse */
+  flex-grow: 1;
 }
 
 .video-meta {
