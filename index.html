@@ -1,3 +1,5 @@
+HTML
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -18,12 +20,15 @@
 
       <article class="video-card">
         <div class="video-wrapper">
-          <iframe 
-            src="https://www.youtube.com/embed/xCq7ZSOkGPs" 
-            title="Jab/112" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
+          <!-- Sostituito l'iframe con un tag img per la GIF -->
+          <img 
+            src="Adobe Express - Jab.gif" 
+            alt="Jab/112" 
+            class="gif-player"
+            id="gifJab"
+            onclick="playGif()"
+            onmouseenter="playGif()"
+            onmouseleave="resetGif()">
         </div>
         <div class="video-content">
           <span class="video-tag">La Base</span>
@@ -38,6 +43,23 @@
 
     </section>
   </main>
+
+  <!-- Script semplice per gestire il play/reset della GIF -->
+  <script>
+    const gif = document.getElementById('gifJab');
+    const gifSrc = gif.src;
+
+    function playGif() {
+      // Forza il browser a ricaricare la GIF facendola ripartire da capo
+      gif.src = '';
+      gif.src = gifSrc;
+    }
+
+    function resetGif() {
+      // Se vuoi che si blocchi/stoppi quando esci con il mouse, 
+      // puoi lasciare la funzione vuota o reimpostarla.
+    }
+  </script>
 
 </body>
 </html>
