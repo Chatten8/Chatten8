@@ -3,47 +3,500 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chatten, Chatten 8</title>
-  
-  <!-- Collega il tuo file CSS -->
+  <title>Chatten, Chatten 8 – Lista mosse</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Testata del sito -->
   <header class="header">
-    <h1>Lista Mosse di Chatten, Chatten 8</h1>
+    <h1>Lista mosse di Chatten, Chatten 8</h1>
+    <p class="header-sub">Passa il mouse sul riquadro per vedere la mossa. Clicca per attivare il loop, clicca di nuovo per fermarlo.</p>
   </header>
-  
-  <!-- Contenitore principale della griglia -->
+
   <main class="container">
     <section class="video-grid">
 
-      <!-- Scheda Video 1: File MP4 -->
       <article class="video-card">
-        <div class="video-wrapper">
-          <video 
-            src="Jab.mp4" 
-            muted 
-            playsinline
-            preload="metadata"
-            onmouseenter="this.play()" 
-            onmouseleave="this.pause(); this.currentTime = 0;">
-          </video>
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci Jab. Clicca per il loop">
+          <video src="Jab.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
         </div>
         <div class="video-content">
-          <span class="video-tag">La Base</span>
-          <h2 class="video-title">Jab/112</h2>
-          <p class="video-description">
-            La mossa più veloce di Steve, Steve Fox.
-          </p>
-          <div class="video-meta">
-          </div>
+          <span class="video-tag">La base</span>
+          <h2 class="video-title">Jab / 112</h2>
+          <p class="video-description">La mossa più veloce di Steve, Steve Fox.</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-wrapper" tabindex="0" role="button" aria-label="Riproduci aggiungi. Clicca per il loop">
+          <video src="aggiungi.mp4" muted playsinline preload="metadata"></video>
+          <span class="loop-badge">Loop attivo</span>
+          <span class="empty-note">Video non ancora caricato</span>
+        </div>
+        <div class="video-content">
+          <span class="video-tag">aggiungi</span>
+          <h2 class="video-title">aggiungi</h2>
+          <p class="video-description">aggiungi</p>
         </div>
       </article>
 
     </section>
   </main>
 
+  <script>
+    document.querySelectorAll(".video-card").forEach(function (card) {
+      var wrapper = card.querySelector(".video-wrapper");
+      var video = card.querySelector("video");
+      var looping = false;
+
+      function play() {
+        var p = video.play();
+        if (p && p.catch) p.catch(function () {});
+      }
+      function stop() {
+        video.pause();
+        video.currentTime = 0;
+      }
+
+      // Video mancante: mostra il messaggio nel riquadro
+      video.addEventListener("error", function () {
+        card.classList.add("is-empty");
+      });
+
+      // Hover (solo mouse): parte all'ingresso, si ferma all'uscita se il loop è spento
+      wrapper.addEventListener("pointerenter", function (e) {
+        if (e.pointerType === "mouse") play();
+      });
+      wrapper.addEventListener("pointerleave", function (e) {
+        if (e.pointerType === "mouse" && !looping) stop();
+      });
+
+      // Click o tastiera: attiva/disattiva il loop
+      function toggleLoop() {
+        looping = !looping;
+        video.loop = looping;
+        card.classList.toggle("is-looping", looping);
+        if (looping) play(); else stop();
+      }
+      wrapper.addEventListener("click", toggleLoop);
+      wrapper.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleLoop();
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
+
