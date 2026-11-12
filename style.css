@@ -15,6 +15,7 @@
   --transition: all 0.3s ease;
 }
 
+/* CORRETTO: usa l'asterisco * invece del trattino - */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -87,6 +88,17 @@ body {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* AGGIUNTO QUI: Regole per far adattare perfettamente la GIF nel box 16:9 */
+.video-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .video-content {
