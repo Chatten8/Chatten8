@@ -15,7 +15,6 @@
   --transition: all 0.3s ease;
 }
 
-/* CORRETTO: usa l'asterisco * invece del trattino - */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -73,11 +72,15 @@ body {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
 }
 
+/* Modificato per rendere il riquadro quadrato e rimpicciolito (es. 65%) */
 .video-wrapper {
   position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  background-color: #000;
+  width: 65%;          /* Puoi modificarlo se lo vuoi più piccolo (es. 50%) o più grande (es. 80%) */
+  margin: 20px auto 0; /* Centra il riquadro nella scheda */
+  padding-top: 65%;    /* Mantiene le stesse proporzioni della larghezza, creando un quadrato 1:1 */
+  background-color: transparent;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .video-wrapper iframe,
@@ -90,14 +93,14 @@ body {
   border: none;
 }
 
-/* AGGIUNTO QUI: Regole per far adattare perfettamente la GIF nel box 16:9 */
+/* Regole per la GIF quadrata e centrata */
 .video-wrapper img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Mostra tutta la GIF senza tagliarla */
   cursor: pointer;
 }
 
