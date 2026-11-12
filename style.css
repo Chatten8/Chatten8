@@ -34,7 +34,7 @@ body {
 .header {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(180deg, rgba(21, 28, 46, 0.8) 0%, rgba(11, 15, 25, 0) 100%);
+  background: linear-gradient(180deg, #151c2e 0%, #0b0f19 100%);
 }
 
 .header h1 {
@@ -74,6 +74,7 @@ body {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
 }
 
+/* Riquadro quadrato e centrato per il video */
 .video-wrapper {
   position: relative;
   width: 65%;          
@@ -92,7 +93,7 @@ body {
   width: 100%;
   height: 100%;
   border: none;
-  object-fit: cover; /* Riempie interamente il riquadro senza lasciare spazi vuoti */
+  object-fit: cover; /* Riempie interamente il riquadro */
   cursor: pointer;     
 }
 
