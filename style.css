@@ -1,142 +1,237 @@
-CSS
+/* ==========================================================
+   Chatten, Chatten 8 – Lista mosse
+   Tema: blu notte che schiarisce dall'alto verso il basso
+   ========================================================== */
 
 :root {
-  --bg-main: #0b0f19;
-  --bg-card: #151c2e;
-  --bg-card-hover: #1c263e;
-  
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  
-  --accent: #38bdf8;
-  --accent-glow: rgba(56, 189, 248, 0.15);
-  
-  --border-color: rgba(255, 255, 255, 0.08);
-  --radius: 12px;
-  --transition: all 0.3s ease;
+  --night-0: #04081a;
+  --night-1: #081235;
+  --night-2: #10224f;
+  --night-3: #1a3470;
+  --night-4: #264a93;
+
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-bg-hover: rgba(255, 255, 255, 0.09);
+  --card-border: rgba(160, 190, 255, 0.16);
+
+  --text-primary: #eef3ff;
+  --text-secondary: #b3c1e6;
+
+  --accent: #8cc8ff;
+  --accent-soft: rgba(140, 200, 255, 0.16);
+
+  --radius: 10px;
+  --font-title: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: var(--bg-main);
-  color: var(--text-primary);
-  line-height: 1.6;
-  padding-bottom: 60px;
+html {
+  background-color: var(--night-0);
 }
 
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  padding-bottom: 80px;
+  /* Gradiente: parte dal blu notte e si schiarisce scendendo lungo tutta la pagina */
+  background: linear-gradient(
+    180deg,
+    var(--night-0) 0%,
+    var(--night-1) 20%,
+    var(--night-2) 50%,
+    var(--night-3) 78%,
+    var(--night-4) 100%
+  );
+  background-repeat: no-repeat;
+}
+
+/* ---------- Testata ---------- */
+
 .header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px 24px 48px;
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(180deg, #151c2e 0%, #0b0f19 100%);
 }
 
 .header h1 {
-  font-size: 2.2rem;
+  font-family: var(--font-title);
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
   font-weight: 700;
-  letter-spacing: -0.5px;
-  color: var(--text-primary);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
 }
 
+.header-sub {
+  max-width: 56ch;
+  margin: 18px auto 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+/* ---------- Griglia ---------- */
+
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
 }
+
+/* ---------- Scheda ---------- */
 
 .video-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: var(--transition);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 28px rgba(2, 6, 20, 0.35);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
-.video-card:hover {
-  transform: translateY(-6px);
-  background-color: var(--bg-card-hover);
-  border-color: rgba(56, 189, 248, 0.3);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
+.video-card:hover,
+.video-card.is-looping {
+  background-color: var(--card-bg-hover);
+  border-color: rgba(140, 200, 255, 0.4);
 }
 
-/* Riquadro quadrato e centrato per il video */
+/* ---------- Riquadro video rettangolare 16:9 ---------- */
+
 .video-wrapper {
   position: relative;
-  width: 65%;          
-  margin: 20px auto 0; 
-  padding-top: 65%;    
-  background-color: transparent;
-  border-radius: 8px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, var(--night-1), var(--night-3));
+  cursor: pointer;
   overflow: hidden;
 }
 
-.video-wrapper iframe,
 .video-wrapper video {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  border: none;
-  object-fit: cover; /* Riempie interamente il riquadro */
-  cursor: pointer;     
+  object-fit: cover;
+  display: block;
 }
 
+.video-wrapper:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+/* Indicatore loop (visibile solo quando il loop è attivo) */
+.loop-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--night-0);
+  background-color: var(--accent);
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.video-card.is-looping .loop-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Messaggio mostrato se il file mp4 non esiste ancora */
+.empty-note {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.video-card.is-empty video {
+  visibility: hidden;
+}
+
+.video-card.is-empty .empty-note {
+  display: flex;
+}
+
+/* ---------- Testi della scheda ---------- */
+
 .video-content {
-  padding: 20px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 18px 20px 22px;
 }
 
 .video-tag {
   align-self: flex-start;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+  padding: 2px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: var(--accent);
-  background-color: var(--accent-glow);
-  padding: 4px 10px;
-  border-radius: 20px;
-  margin-bottom: 12px;
+  background-color: var(--accent-soft);
+  border-radius: 999px;
 }
 
 .video-title {
-  font-size: 1.2rem;
+  margin-bottom: 6px;
+  font-family: var(--font-title);
+  font-size: 1.6rem;
   font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 10px;
-  line-height: 1.3;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
 }
 
 .video-description {
-  font-size: 0.95rem;
   color: var(--text-secondary);
-  margin-bottom: 20px;
-  flex-grow: 1;
+  font-size: 0.98rem;
 }
 
-.video-meta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  border-top: 1px solid var(--border-color);
-  padding-top: 12px;
+/* ---------- Mobile ---------- */
+
+@media (max-width: 480px) {
+  .header { padding: 48px 20px 32px; }
+  .container { padding: 0 16px; }
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
+
+/* ---------- Accessibilità ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
