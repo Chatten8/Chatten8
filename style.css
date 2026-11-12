@@ -1,3 +1,5 @@
+CSS
+
 :root {
   --bg-main: #0b0f19;
   --bg-card: #151c2e;
@@ -72,12 +74,12 @@ body {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
 }
 
-/* Modificato per rendere il riquadro quadrato e rimpicciolito (es. 65%) */
+/* Riquadro quadrato e centrato per il video */
 .video-wrapper {
   position: relative;
-  width: 65%;          /* Puoi modificarlo se lo vuoi più piccolo (es. 50%) o più grande (es. 80%) */
+  width: 65%;          /* Puoi regolarlo (es. 50% o 75%) a seconda di quanto vuoi grande il riquadro */
   margin: 20px auto 0; /* Centra il riquadro nella scheda */
-  padding-top: 65%;    /* Mantiene le stesse proporzioni della larghezza, creando un quadrato 1:1 */
+  padding-top: 65%;    /* Mantiene le stesse proporzioni, creando un quadrato 1:1 */
   background-color: transparent;
   border-radius: 8px;
   overflow: hidden;
@@ -91,17 +93,8 @@ body {
   width: 100%;
   height: 100%;
   border: none;
-}
-
-/* Regole per la GIF quadrata e centrata */
-.video-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Mostra tutta la GIF senza tagliarla */
-  cursor: pointer;
+  object-fit: contain; /* Assicura che il video MP4 si veda interamente senza tagli */
+  cursor: pointer;     /* Mostra l'icona del puntatore al passaggio del mouse */
 }
 
 .video-content {
