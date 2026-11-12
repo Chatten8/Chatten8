@@ -7,28 +7,32 @@ HTML
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chatten, Chatten 8</title>
   
+  <!-- Collega il tuo file CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Testata del sito -->
   <header class="header">
     <h1>Lista Mosse di Chatten, Chatten 8</h1>
   </header>
   
+  <!-- Contenitore principale della griglia -->
   <main class="container">
     <section class="video-grid">
 
+      <!-- Scheda Video 1: File MP4 -->
       <article class="video-card">
         <div class="video-wrapper">
-          <!-- Sostituito l'iframe con un tag img per la GIF -->
-          <img 
-            src="Adobe Express - Jab.gif" 
-            alt="Jab/112" 
-            class="gif-player"
-            id="gifJab"
-            onclick="playGif()"
-            onmouseenter="playGif()"
-            onmouseleave="resetGif()">
+          <video 
+            src="Jab.mp4" 
+            muted 
+            playsinline
+            preload="metadata"
+            onmouseenter="this.play()" 
+            onmouseleave="this.pause(); this.currentTime = 0;"
+            onclick="this.paused ? this.play() : this.pause();">
+          </video>
         </div>
         <div class="video-content">
           <span class="video-tag">La Base</span>
@@ -43,23 +47,6 @@ HTML
 
     </section>
   </main>
-
-  <!-- Script semplice per gestire il play/reset della GIF -->
-  <script>
-    const gif = document.getElementById('gifJab');
-    const gifSrc = gif.src;
-
-    function playGif() {
-      // Forza il browser a ricaricare la GIF facendola ripartire da capo
-      gif.src = '';
-      gif.src = gifSrc;
-    }
-
-    function resetGif() {
-      // Se vuoi che si blocchi/stoppi quando esci con il mouse, 
-      // puoi lasciare la funzione vuota o reimpostarla.
-    }
-  </script>
 
 </body>
 </html>
