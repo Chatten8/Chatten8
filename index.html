@@ -419,6 +419,12 @@
       var video = card.querySelector("video");
       var looping = false;
 
+      var src = video.getAttribute("src");
+      if (src && src.indexOf("#") === -1) {
+        video.setAttribute("src", src + "#t=0.001");
+      }
+      video.preload = "auto";
+      
       function play() {
         var p = video.play();
         if (p && p.catch) p.catch(function () {});
@@ -428,12 +434,11 @@
         video.currentTime = 0;
       }
 
-      // Video mancante: mostra il messaggio nel riquadro
       video.addEventListener("error", function () {
         card.classList.add("is-empty");
       });
 
-      // Hover (solo mouse): parte all'ingresso, si ferma all'uscita se il loop è spento
+
       wrapper.addEventListener("pointerenter", function (e) {
         if (e.pointerType === "mouse") play();
       });
@@ -441,7 +446,6 @@
         if (e.pointerType === "mouse" && !looping) stop();
       });
 
-      // Click o tastiera: attiva/disattiva il loop
       function toggleLoop() {
         looping = !looping;
         video.loop = looping;
