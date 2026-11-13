@@ -419,27 +419,19 @@
       var video = card.querySelector("video");
       var looping = false;
 
-      // Fix iOS: appena i metadati sono pronti, salta a 0.001s
-      // così Safari disegna il primo fotogramma come anteprima
-      video.addEventListener("loadedmetadata", function () {
-        try { video.currentTime = 0.001; } catch (e) {}
-      });
-
       function play() {
         var p = video.play();
         if (p && p.catch) p.catch(function () {});
       }
       function stop() {
         video.pause();
-        try { video.currentTime = 0.001; } catch (e) {}
+        video.currentTime = 0;
       }
 
-      // Video mancante: mostra il messaggio nel riquadro
       video.addEventListener("error", function () {
         card.classList.add("is-empty");
       });
 
-      // Hover (solo mouse): parte all'ingresso, si ferma all'uscita se il loop è spento
       wrapper.addEventListener("pointerenter", function (e) {
         if (e.pointerType === "mouse") play();
       });
@@ -447,7 +439,6 @@
         if (e.pointerType === "mouse" && !looping) stop();
       });
 
-      // Click o tastiera: attiva/disattiva il loop
       function toggleLoop() {
         looping = !looping;
         video.loop = looping;
@@ -467,5 +458,4 @@
 </body>
 </html>
 
-</html>
 
